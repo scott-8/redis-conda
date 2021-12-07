@@ -26,7 +26,8 @@ meta = {
     "about": {
         "home": d["homepage"],
         "license": d["license"],
-        "summary": d["description"],
+        "summary": "Windows-compatible Redis package.",
+        "description": d["description"],
         "dev_url": d["checkver"]["github"],
     },
     "extra": {

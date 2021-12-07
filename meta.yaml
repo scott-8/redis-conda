@@ -18,7 +18,9 @@ test:
 about:
   home: https://redis.io
   license: BSD-3-Clause
-  summary: In-memory data structure store, used as a database, cache and message broker.
+  summary: Windows-compatible Redis package.
+  description: In-memory data structure store, used as a database, cache and message
+    broker.
   dev_url: https://github.com/tporadowski/redis
 extra:
   maintainers:
