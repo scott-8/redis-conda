@@ -1,0 +1,25 @@
+package:
+  name: redis
+  version: 5.0.14
+source:
+  url: https://github.com/tporadowski/redis/releases/download/v5.0.14/Redis-x64-5.0.14.zip
+  sha256: 858be95d18021e350f28a8d24ab5139fcc856f7667f85e4f114ff7b30082e48e
+build:
+  skip: 'True # [not win64]'
+  script:
+  - copy redis-benchmark.exe %LIBRARY_BIN%\redis-benchmark.exe
+  - copy redis-check-aof.exe %LIBRARY_BIN%\redis-check-aof.exe
+  - copy redis-cli.exe %LIBRARY_BIN%\redis-cli.exe
+  - copy redis-server.exe %LIBRARY_BIN%\redis-server.exe
+test:
+  commands:
+  - redis-server --version
+  - redis-cli --version
+about:
+  home: https://redis.io
+  license: BSD-3-Clause
+  summary: In-memory data structure store, used as a database, cache and message broker.
+  dev_url: https://github.com/tporadowski/redis
+extra:
+  maintainers:
+  - scott
