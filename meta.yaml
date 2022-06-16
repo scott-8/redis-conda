@@ -1,14 +1,15 @@
 package:
   name: redis
-  version: 5.0.14
+  version: 5.0.14.1
 source:
-  url: https://github.com/tporadowski/redis/releases/download/v5.0.14/Redis-x64-5.0.14.zip
-  sha256: 858be95d18021e350f28a8d24ab5139fcc856f7667f85e4f114ff7b30082e48e
+  url: https://github.com/tporadowski/redis/releases/download/v5.0.14.1/Redis-x64-5.0.14.1.zip
+  sha256: 018ea18a35876383cbb5f4cd0258adfc87747cf9d619bce1cf73a2e36f720ccf
 build:
   skip: 'True # [not win64]'
   script:
   - copy redis-benchmark.exe %LIBRARY_BIN%\redis-benchmark.exe
   - copy redis-check-aof.exe %LIBRARY_BIN%\redis-check-aof.exe
+  - copy redis-check-rdb.exe %LIBRARY_BIN%\redis-check-rdb.exe
   - copy redis-cli.exe %LIBRARY_BIN%\redis-cli.exe
   - copy redis-server.exe %LIBRARY_BIN%\redis-server.exe
 test:

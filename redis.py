@@ -1,7 +1,7 @@
 import requests
 import yaml
 
-r = requests.get("https://raw.githubusercontent.com/ScoopInstaller/Main/master/bucket/redis5.json")
+r = requests.get("https://raw.githubusercontent.com/ScoopInstaller/Main/master/bucket/redis.json")
 d = r.json()
 
 meta = {
